@@ -26,10 +26,10 @@ with open(file="Birthday_letter.txt", mode="w") as file:
 
 with sl.SMTP("smtp-mail.outlook.com", 587) as connection:
     connection.starttls()
-    connection.login(user="pythontest122@outlook.com", password="knsp2793")
+    connection.login(user="<Your outlook email address>", password="<account's password>")
     connection.sendmail(
-        from_addr="pythontest122@outlook.com",
-        to_addrs="aadi2399@outlook.com",
+        from_addr="<same as user>",
+        to_addrs="<reciever's address>",
         msg=f"Subject:Happy Birthday\n\n{letter_to_send}"
     )
 
